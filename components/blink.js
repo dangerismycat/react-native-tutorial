@@ -1,6 +1,8 @@
 import React, { PropTypes } from 'react';
 import { View } from 'react-native';
 
+import styles from '../styles.js';
+
 
 class Blink extends React.Component {
   constructor(props, context) {
@@ -23,7 +25,7 @@ class Blink extends React.Component {
     const content = this.state.visible ? this.props.children : null;
 
     return (
-      <View style={ { alignItems: this.props.align } }>
+      <View style={styles.blink}>
         {content}
       </View>
     );
@@ -31,7 +33,6 @@ class Blink extends React.Component {
 }
 
 Blink.propTypes = {
-  align: PropTypes.string.isRequired,
   children: PropTypes.oneOfType([
       PropTypes.arrayOf(PropTypes.node),
       PropTypes.node,

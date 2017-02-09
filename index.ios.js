@@ -5,11 +5,13 @@ import Blink from './components/blink.js';
 import Buster from './components/buster.js';
 import Greeting from './components/greeting.js';
 
+import styles from './styles.js';
+
 
 class FirstTutorial extends React.Component {
   render() {
     return (
-      <View style={ { alignItems: 'center' } }>
+      <View style={styles.mainView}>
         <Buster />
         <Blink align={'center'}>
           <Greeting target={'brother'} />
