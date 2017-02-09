@@ -1,15 +1,39 @@
-import React, { Component } from 'react';
-import { AppRegistry, Image, Text } from 'react-native';
+import React from 'react';
+import { AppRegistry, Image, Text, View } from 'react-native';
 
-class FirstTutorial extends Component {
+
+class Greeting extends React.Component {
   render() {
-    const tinaBelcher = { uri: 'https://s-media-cache-ak0.pinimg.com/736x/f7/86/ed/f786ed81b3e25f10b0bb024712f7d544.jpg' };
+    return (
+     <Text style={ { marginTop: 15 } }>
+       Hey {this.props.target}!
+     </Text>
+    );
+  }
+}
+
+class Buster extends React.Component {
+  render() {
+    const busterBluth = require('./assets/buster-bluth.png');
 
     return (
-//      <Text style={ { margin: 50 } }>
-//        Sup world!
-//      </Text>
-      <Image source={tinaBelcher} style={ { flex: 1 } } />
+      <Image source={busterBluth} style={ { borderRadius: 5, flexGrow: 1, marginTop: 30 } } />
+    );
+  }
+}
+
+class FirstTutorial extends React.Component {
+  render() {
+
+    return (
+      <View style={ { alignItems: 'center' } }>
+        <Buster />
+        <Greeting target={'brother'} />
+        <Greeting target={'hermano'} />
+        <Greeting target={'possible nephew'} />
+        <Greeting target={'fake uncle Jack'} />
+        <Greeting target={'father / uncle dad'} />
+      </View>
     );
   }
 }
