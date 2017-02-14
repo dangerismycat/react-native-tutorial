@@ -13,6 +13,18 @@ const styles = StyleSheet.create({
     // flexGrow: 1,
     marginTop: 30,
   },
+  censorifyContainer: {
+    margin: 20,
+  },
+  censorifyDisplay: {
+    margin: 10,
+    fontSize: 40,
+  },
+  censorifyInput: {
+    backgroundColor: 'lightgray',
+    height: 40,
+    width: 200,
+  },
   'color-brick-red': {
     backgroundColor: '#d63d22'
   },
