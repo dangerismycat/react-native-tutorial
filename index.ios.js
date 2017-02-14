@@ -20,9 +20,11 @@ class FirstTutorial extends React.Component {
           <Greeting target={'fake uncle Jack'} />
           <Greeting target={'father / uncle dad'} />
         </Blink>
-        <View style={[styles['color-brick-red'], styles['square-small']]} />
-        <View style={[styles['color-spring-green'], styles['square-medium']]} />
-        <View style={[styles['color-mid-blue'], styles['square-large']]} />
+        <View style={styles.squaresContainer}>
+          <View style={[styles['color-brick-red'], styles['square-small']]} />
+          <View style={[styles['color-spring-green'], styles['square-medium']]} />
+          <View style={[styles['color-mid-blue'], styles['square-large']]} />
+        </View>
       </View>
     );
   }
