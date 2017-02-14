@@ -16,10 +16,11 @@ const styles = StyleSheet.create({
   censorifyContainer: {
     margin: 20,
   },
-  censorifyDisplay: {
+  monkeyEmoji: {
     margin: 10,
     fontSize: 40,
   },
+  censorifyDisplay: {},
   censorifyInput: {
     backgroundColor: 'lightgray',
     height: 40,

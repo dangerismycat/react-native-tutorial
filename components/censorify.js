@@ -1,5 +1,7 @@
 import React, { PropTypes } from 'react';
-import { Text, TextInput, View } from 'react-native';
+import { TextInput, ScrollView, View } from 'react-native';
+
+import MonkeyEmoji from './monkey-emoji.js';
 
 import styles from '../styles.js';
 
@@ -8,7 +10,7 @@ function censorifyText(text) {
   if (typeof text !== 'string') {
     throw new Error('text must be a string');
   }
-  return text.split(' ').map((word) => word && '🙊').join(' ');
+  return text.split(' ').map((word) => word ? <MonkeyEmoji /> : null);
 }
 
 class Censorify extends React.Component {
@@ -35,9 +37,9 @@ class Censorify extends React.Component {
           placeholder="type what ye dare..."
           onChangeText={this.handleChangeText}
         />
-        <Text style={styles.censorifyDisplay}>
+        <ScrollView style={styles.censorifyDisplay}>
           {censorifyText(this.state.text)}
-        </Text>
+        </ScrollView>
       </View>
     );
   }
