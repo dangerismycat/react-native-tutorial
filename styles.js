@@ -38,6 +38,10 @@ const styles = StyleSheet.create({
   greeting: {
     marginTop: 15,
   },
+  simpsonsCharactersContainer: {
+    flex: 1,
+    margin: 22,
+  },
   'square-small': {
     height: 10,
     width: 10,
