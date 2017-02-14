@@ -22,11 +22,11 @@ class Blink extends React.Component {
   }
 
   render() {
-    const content = this.state.visible ? this.props.children : null;
+    const visibilityStyle = this.state.visible ? null : { opacity: 0 };
 
     return (
-      <View style={styles.blink}>
-        {content}
+      <View style={[styles.blink, visibilityStyle]}>
+        {this.props.children}
       </View>
     );
   }
